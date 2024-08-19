@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Sistema de Diárias e Passagens | FESFSUS</title>
+        <title>TESTE deploy</title>
       </Head>
       <ChakraProvider>
         {Component.disableLayout ? (

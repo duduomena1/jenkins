@@ -18,7 +18,7 @@ function Login() {
             <p className="text-[14px] text-position-testimony text-[#8C8A97]">
               Bem vindo ao
             </p>
-            <p className="text-title-banner">Sistema de diárias e passagens</p>
+            <p className="text-title-banner">TESTE</p>
           </div>
           <EmailForm />
         </div>
