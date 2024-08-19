@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  color: #458A2D;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: #458A2D;
+  padding: 14px 10px;
+  background-color: inherit;
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a green background color to navbar links on hover */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #458A2D;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #458A2D;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #458A2D;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.card-hover {
+  transition: all .2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: scale(1.01);
+}
+
+:root {
+  --swiper-theme-color: #ffffff !important;  
+}
+
+/* Estilização da galeria de fotos */
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 100px; /* Estilo de imagem na galeria */
+  margin: 10px;
+  cursor: pointer;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.image-modal img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.image-modal button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
