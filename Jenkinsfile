@@ -5,7 +5,7 @@ pipeline {
         stage ('BUILD image') {
             steps {
                 script{
-                    dockerapp = docker.build("duduomena1/pipeline:${env.BUILD_ID}", '-f ./src/Dockerfile')
+                    dockerapp = docker.build("duduomena1/pipeline:${env.BUILD_ID}", '-f ./Dockerfile')
 
                 }
             }
