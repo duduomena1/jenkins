@@ -1,6 +1,5 @@
 import { myLoader } from '@/utils/utils'
 import Image from 'next/image'
-import logo_fesf from '../../../public/Marca-FESFSUS.png'
 import EmailForm from '@/components/EmailForm'
 
 function Login() {
@@ -9,7 +8,6 @@ function Login() {
       <div className="sm:bg-[#DEDEDE] drop-shadow-md rounded-md sm:w-[50rem] h-[35rem] flex flex-col justify-center items-center gap-10">
         <Image
           loader={myLoader}
-          src={logo_fesf}
           alt="Logotipo Fesfsus"
           className="w-52 sm:w-96"
         />
