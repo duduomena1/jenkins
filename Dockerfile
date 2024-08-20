@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY ./mypipeline/package.json /app/
+COPY ./mypipeline/package*.json ./
 
 RUN npm install
 
