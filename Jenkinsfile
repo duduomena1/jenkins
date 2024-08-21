@@ -20,5 +20,12 @@ pipeline {
                 }
             }
         }
+        stage ('Deploy Kubernetes') {
+            step {
+                withKubeConfig([credencialsId: 'configfile']) {
+                    sh 'kubectl apply -f ./k8s/deployment.yaml'
+                }
+            }
+        }
     }
 }
