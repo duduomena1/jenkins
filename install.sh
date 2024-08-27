@@ -87,7 +87,7 @@ case $choice in
     
     4)  echo "4 - Instalando k3d"
         curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
-        break;;
+;;
     
     5)  echo "5 - Instalando Jenkins"
         echo "Instalação JDK"
