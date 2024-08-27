@@ -4,7 +4,7 @@ echo "Selecione uma opção"
 echo "1 - Instalar todos os pacotes"
 echo "2 - Instalar Docker"
 echo "3 - Instalar kubectl"
-echo "4 - Instalar k3d"
+echo "4 - Instalar MiniKube"
 echo "5 - Instalar Jenkins"
 echo "6 - Instalar Terraform"
 echo "7 - Sair"
@@ -36,10 +36,10 @@ case $choice in
         sudo apt-get update
         sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
         
-        # Instalando K3D
-        echo "Instalando K3D"
-        curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
-        
+        # Instalando miniKube
+        echo "Instalando MiniKube"
+        curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+        sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
         # Instalando Kubernetes
         echo "Instalando dependências do Kubernetes"
         sudo apt-get update && sudo apt-get install -y curl
