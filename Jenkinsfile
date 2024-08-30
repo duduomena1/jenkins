@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  stage('Branch indexing: abort') {
+  stages('Branch indexing: abort') {
             when {
                 allOf {
                     triggeredBy cause: "BranchIndexingCause"
@@ -24,7 +24,7 @@ pipeline {
             }
           }
 
-            stage('list') {
+            stages('list') {
               parallel {
                 stage('list') {
                   steps {
@@ -32,7 +32,7 @@ pipeline {
                   }
                 }
 
-                stage('teste front') {
+                stages('teste front') {
                   steps {
                     sh 'npm i && npm run test:unit'
                   }
