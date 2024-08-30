@@ -17,7 +17,7 @@ pipeline {
 
         stage('deploy ') {
           steps {
-            sh 'docker buildx build --add-port 8081:3000'
+            sh 'docker build -t next/duduomena .'
           }
         }
 
