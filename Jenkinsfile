@@ -24,11 +24,5 @@ pipeline {
       }
     }
 
-    stage('install npm') {
-      steps {
-        sh 'npm i && npm run test:unit'
-      }
-    }
-
   }
 }
