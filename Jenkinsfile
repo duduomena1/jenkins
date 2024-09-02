@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Run ') {
+      steps {
+        sh 'docker run -p 3000:3000 next/duduomena'
+      }
+    }
+
   }
 }
