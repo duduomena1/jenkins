@@ -26,7 +26,7 @@ pipeline {
 
     stage('install npm') {
       steps {
-        sh 'cd /jenkins && npm i && npm run test:unit'
+        sh 'npm i && npm run test:unit'
       }
     }
 
