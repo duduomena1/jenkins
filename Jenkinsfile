@@ -17,7 +17,7 @@ pipeline {
 
         stage('deploy ') {
           steps {
-            sh 'sudo docker build -t next/duduomena .'
+            sh 'docker build -t next/duduomena .'
           }
         }
 
