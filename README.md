@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Como instalar: 
+## Instalando em uma máquina local
+### Recursos
+ - Debian/Ubuntu OS
+ - 3 vCPU
+ - 16GB RAM
+ - 40gb HDD
 
-## Getting Started
+## Pre-Requisitos 
+ - Jenkins
+ - java JDK 17
+ - Docker
+ - Git
+   
+## Get Started
 
-First, run the development server:
+### Com o git instalado na máquina local: 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  ` git clone https://github.com/duduomena1/jenkins.git`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Execute o arquivo `Install.sh`  e selecione a opção "5" ou se preferir acesse https://www.jenkins.io/download/ e realize o passo a passo descrito.
+  >[!NOTE]
+  >Recomenda-se alterar a porta padrão do jenkins para evitar conflitos de aplicações;
+  > Utilize `systemctl edit jenkins` .
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+      [Service]
+      Environment="JENKINS_PORT=8081" #Altere a porta "8081" para uma porta disponivel   
+Após a instalação Acesse http://localhost:(porta selecionada na etapa anterior)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![unlock jenkins](http://gianfratti.com/wp-content/uploads/2019/05/Jenkins_Install_08.png)
 
-## Learn More
+Utilize:
+        
+        sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Copie a chave gerada e cole no campo "Adminstrator password" para destravar o Jenkins.
 
-To learn more about Next.js, take a look at the following resources:
+# Utilizando o Jenkins com Docker 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ Building...
